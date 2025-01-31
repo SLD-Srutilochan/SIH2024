@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBEE - Plant Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1><i class="fas fa-seedling"></i> AgroBEE</h1>
+        <button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard">
+        <div class="header">
+            <p>Your Smart Plant Monitoring Solution</p>
+        </div>
+
+        <!-- Sensor Cards -->
+        <div class="sensor-cards">
+            <div class="card temperature">
+                <div class="icon"><i class="fas fa-thermometer-half"></i></div>
+                <h2>Temperature</h2>
+                <p><span id="temperature">--</span> °C</p>
+            </div>
+            <div class="card humidity">
+                <div class="icon"><i class="fas fa-tint"></i></div>
+                <h2>Humidity</h2>
+                <p><span id="humidity">--</span> %</p>
+            </div>
+            <div class="card soil-moisture-raw">
+                <div class="icon"><i class="fas fa-leaf"></i></div>
+                <h2>Soil Moisture (Raw)</h2>
+                <p><span id="soilMoistureRaw">--</span></p>
+            </div>
+            <div class="card soil-moisture-percent">
+                <div class="icon"><i class="fas fa-percentage"></i></div>
+                <h2>Soil Moisture (%)</h2>
+                <p><span id="soilMoisturePercent">--</span> %</p>
+            </div>
+        </div>
+
+        <!-- Chart Container -->
+        <div class="chart-container">
+            <canvas id="sensorChart"></canvas>
+        </div>
+
+        <div class="footer">
+            <p>Real-time sensor data from Arduino 🌿 | Powered by AgroBEE</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .dashboard {
+    background: #333;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .card {
+    background: #444;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .navbar {
+    background: #222;
+}
+
+.dark-mode .navbar button {
+    color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #27ae60;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.navbar button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Dashboard Container */
+.dashboard {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    transition: background 0.3s;
+}
+
+/* Sensor Cards Grid */
+.sensor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Individual Card Styling */
+.card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Chart Container */
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 1.5rem;
+}
